@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: web
+
+server:
+  port: 8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    ldap:
+      enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+jwt:
+  expirationInMs: '604800000'
+  secret: s3cr3t
