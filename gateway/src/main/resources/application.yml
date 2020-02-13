@@ -10,6 +10,9 @@ management:
     web:
       exposure:
         include: '*'
+  health:
+    ldap:
+      enabled: false
 
 zuul:
   sensitiveHeaders:
@@ -29,4 +32,6 @@ eureka:
 info:
   routes: *routes
 
-
+jwt:
+  expirationInMs: '604800000'
+  secret: s3cr3t

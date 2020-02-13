@@ -46,14 +46,9 @@ public class JwtWebSecurityConfig extends WebSecurityConfigurerAdapter {
    protected void configure(HttpSecurity http) throws Exception {
       http.authorizeRequests()
             .requestMatchers().permitAll()
-
-            // All other requests are authenticated
             .anyRequest().authenticated()
-
             .and()
-
             .addFilterAfter(jwtFilter, UsernamePasswordAuthenticationFilter.class)
-
             .formLogin()
             .loginPage("/web/login");
    }

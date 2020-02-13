@@ -10,9 +10,6 @@ management:
     web:
       exposure:
         include: '*'
-  health:
-    ldap:
-      enabled: false
 
 eureka:
   client:
@@ -21,6 +18,3 @@ eureka:
   instance:
     hostname: localhost
 
-jwt:
-  expirationInMs: '604800000'
-  secret: s3cr3t
